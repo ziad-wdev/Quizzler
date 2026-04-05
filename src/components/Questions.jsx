@@ -3,12 +3,7 @@
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/utils/cn";
-
-function decodeHtml(html) {
-  const txt = document.createElement("textarea");
-  txt.innerHTML = html;
-  return txt.value;
-}
+import he from "he";
 
 const Questions = ({ questions }) => {
   const [questionNum, setQuestionNum] = useState(1);
@@ -17,9 +12,9 @@ const Questions = ({ questions }) => {
   const question = questions[questionNum - 1];
   const totalNum = questions.length;
 
-  const questionText = decodeHtml(question.question);
-  const incorrectAnswers = question.incorrect_answers.map((answer) => decodeHtml(answer));
-  const correctAnswer = decodeHtml(question.correct_answer);
+  const questionText = he.decode(question.question);
+  const incorrectAnswers = question.incorrect_answers.map((answer) => he.decode(answer));
+  const correctAnswer = he.decode(question.correct_answer);
   const answers = [...incorrectAnswers, correctAnswer].sort();
 
   function handleAnswerClick(answer) {
@@ -60,7 +55,7 @@ const Questions = ({ questions }) => {
           >
             <div
               className={cn(
-                "text-md flex-center aspect-square size-12 rounded-full bg-violet-100 text-violet-600 shadow-sm transition-colors",
+                "text-md flex-center aspect-square size-8 rounded-full bg-violet-100 text-violet-600 shadow-sm transition-colors sm:size-10 lg:size-12",
                 {
                   "bg-violet-600 text-white": selectedAnswer && selectedAnswer === answer,
                 },
