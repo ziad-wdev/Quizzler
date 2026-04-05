@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/utils/cn";
 import he from "he";
@@ -33,8 +33,23 @@ const Questions = ({ questions }) => {
     setSelectedAnswer(null);
   }
 
+  const time = 30;
+  const [counter, setCounter] = useState(time);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCounter((c) => c - 1);
+      if (counter === 0) {
+        handleNextClick();
+        setCounter(time);
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  });
+
   return (
     <div className="flex-center w-full flex-col gap-8 text-center text-xl sm:text-2xl lg:text-3xl">
+      <p className="-mb-8 text-white">{counter}</p>
       <h1 className="text-white">
         Question {questionNum} of {totalNum}
       </h1>

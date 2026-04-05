@@ -11,9 +11,9 @@ const Page = async ({ searchParams }) => {
       {score && total ? (
         <>
           <p className="text-3xl font-bold sm:text-4xl lg:text-5xl">Bravo! you have Scored</p>
-          <p className="text-[14rem] leading-none font-bold text-white text-shadow-[5px_5px_10px_rgba(0,0,0,0.1)] sm:text-[16rem] lg:text-[20rem]">
+          <h1 className="text-[14rem] leading-none font-bold text-white text-shadow-[5px_5px_10px_rgba(0,0,0,0.1)] sm:text-[16rem] lg:text-[20rem]">
             {score}/{total}
-          </p>
+          </h1>
           <Link
             href="/"
             className="text-3xl font-bold underline decoration-4 underline-offset-2 sm:text-4xl lg:text-5xl"
