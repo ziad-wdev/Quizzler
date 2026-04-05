@@ -8,6 +8,11 @@
   @apply flex items-center justify-center;
 }
 
+@utility min-h-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 .shake {
   animation: shake 0.1s ease-in-out 0s 2;
 }

@@ -22,7 +22,7 @@ const Page = async () => {
           <p className="text-xl font-bold text-white sm:text-4xl lg:text-5xl">No questions available.</p>
           <Link
             href="/"
-            className="text-xl font-bold text-white underline decoration-4 underline-offset-2 sm:text-4xl lg:text-5xl"
+            className="text-xl font-bold text-white underline decoration-2 underline-offset-2 sm:text-4xl lg:text-5xl"
           >
             Return to Home
           </Link>

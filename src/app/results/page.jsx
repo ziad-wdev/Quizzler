@@ -14,14 +14,14 @@ const Page = async ({ searchParams }) => {
           <h1 className="text-8xl leading-none text-white text-shadow-[5px_5px_10px_rgba(0,0,0,0.1)] sm:text-[10rem] lg:text-[14rem]">
             {score}/{total}
           </h1>
-          <Link href="/" className="text-xl underline decoration-4 underline-offset-2 sm:text-4xl lg:text-5xl">
+          <Link href="/" className="text-xl underline decoration-2 underline-offset-2 sm:text-4xl lg:text-5xl">
             Wanna Play Again?
           </Link>
         </>
       ) : (
         <>
           <p className="text-xl sm:text-4xl lg:text-5xl">No score available</p>
-          <Link href="/" className="text-xl underline decoration-4 underline-offset-2 sm:text-4xl lg:text-5xl">
+          <Link href="/" className="text-xl underline decoration-2 underline-offset-2 sm:text-4xl lg:text-5xl">
             Return to Home
           </Link>
         </>
