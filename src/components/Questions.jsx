@@ -6,6 +6,8 @@ import { cn } from "@/utils/cn";
 import he from "he";
 
 const Questions = ({ questions }) => {
+  const time = 30;
+  const [counter, setCounter] = useState(time);
   const [questionNum, setQuestionNum] = useState(1);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
@@ -29,12 +31,11 @@ const Questions = ({ questions }) => {
       router.replace(`/results?score=${score.current}&total=${totalNum}`);
       return;
     }
+    setCounter(time);
     setQuestionNum((q) => q + 1);
     setSelectedAnswer(null);
   }
 
-  const time = 30;
-  const [counter, setCounter] = useState(time);
   useEffect(() => {
     const timer = setInterval(() => {
       setCounter((c) => c - 1);
