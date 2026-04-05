@@ -49,7 +49,7 @@ const Questions = ({ questions }) => {
   });
 
   return (
-    <div className="flex-center w-full flex-col gap-8 text-center text-xl sm:text-2xl lg:text-3xl">
+    <div className="flex-center text-md w-full flex-col gap-8 text-center sm:text-2xl lg:text-4xl">
       <p className="-mb-8 text-white">{counter}</p>
       <h1 className="text-white">
         Question {questionNum} of {totalNum}
@@ -57,7 +57,7 @@ const Questions = ({ questions }) => {
       <p className="max-w-3xl text-white">{questionText}</p>
       <div className="h-0.5 w-48 bg-white"></div>
 
-      <div className="grid w-full max-w-xl grid-cols-1 gap-4 text-lg sm:text-xl lg:text-2xl">
+      <div className="grid w-full max-w-xl grid-cols-1 gap-4">
         {answers.map((answer, index) => (
           <button
             key={answer}

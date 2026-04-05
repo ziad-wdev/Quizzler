@@ -5,29 +5,23 @@ const Page = async ({ searchParams }) => {
 
   return (
     <div
-      className="flex-center h-full flex-col gap-8 bg-cover bg-center px-8"
+      className="flex-center min-h-screen flex-col gap-8 bg-cover bg-center p-8 font-bold"
       style={{ backgroundImage: "url(/results.avif)" }}
     >
       {score && total ? (
         <>
-          <p className="text-3xl font-bold sm:text-4xl lg:text-5xl">Bravo! you have Scored</p>
-          <h1 className="text-[14rem] leading-none font-bold text-white text-shadow-[5px_5px_10px_rgba(0,0,0,0.1)] sm:text-[16rem] lg:text-[20rem]">
+          <p className="text-xl sm:text-4xl lg:text-5xl">Bravo! you have Scored</p>
+          <h1 className="text-8xl leading-none text-white text-shadow-[5px_5px_10px_rgba(0,0,0,0.1)] sm:text-[10rem] lg:text-[14rem]">
             {score}/{total}
           </h1>
-          <Link
-            href="/"
-            className="text-3xl font-bold underline decoration-4 underline-offset-2 sm:text-4xl lg:text-5xl"
-          >
+          <Link href="/" className="text-xl underline decoration-4 underline-offset-2 sm:text-4xl lg:text-5xl">
             Wanna Play Again?
           </Link>
         </>
       ) : (
         <>
-          <p className="text-3xl font-bold sm:text-4xl lg:text-5xl">No score available</p>
-          <Link
-            href="/"
-            className="text-3xl font-bold underline decoration-4 underline-offset-2 sm:text-4xl lg:text-5xl"
-          >
+          <p className="text-xl sm:text-4xl lg:text-5xl">No score available</p>
+          <Link href="/" className="text-xl underline decoration-4 underline-offset-2 sm:text-4xl lg:text-5xl">
             Return to Home
           </Link>
         </>

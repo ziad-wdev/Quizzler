@@ -13,9 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={quicksand.variable}>
-      <body className="font-quicksand font-semibold antialiased" style={{ height: "100vh", height: "100dvh" }}>
-        {children}
-      </body>
+      <body className="font-quicksand min-h-screen font-semibold text-zinc-700 antialiased">{children}</body>
     </html>
   );
 }
