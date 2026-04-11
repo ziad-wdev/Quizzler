@@ -2,8 +2,6 @@
 
 Quizzler is a modern, fast, and interactive quiz application built with **Next.js 16** and **React 19**. It challenges users with computer science questions dynamically fetched from the Open Trivia Database API, featuring a sleek user interface and a real-time countdown timer.
 
-![Quizzler Preview](public/home.avif)
-
 ## ✨ Features
 
 - **Dynamic Questions**: Fetches 10 fresh computer science questions per session from the Open Trivia Database.
@@ -76,4 +74,4 @@ If you have any questions or find a bug, please open an issue in the repository.
 
 ---
 
-Built with ❤️ by [Your Name/Organization]
+Built with ❤️ by Ziad Aboughaleb
